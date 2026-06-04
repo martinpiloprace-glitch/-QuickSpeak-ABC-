@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>US Angličtina - Lekce</title>
+    <style>
+        body { font-family: sans-serif; background-color: black; padding: 20px; text-align: center; }
+        #card-wrapper { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .card { width: 80%; max-width: 500px; padding: 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; margin: 5px; }
+        .card:hover { background: #e9e9e9; }
+        .back-btn { margin-bottom: 20px; padding: 10px 20px; cursor: pointer; background: #333; color: #fff; border: none; border-radius: 5px; }
+        .translation-box { font-size: 1.5em; font-weight: bold; color: #007bff; }
+    </style>
+</head>
+<body>
+
+    <div id="navigation"></div>
+    <div id="card-wrapper"></div>
+
+    <script>
+        const wrapper = document.getElementById('card-wrapper');
+        const nav = document.getElementById('navigation');
+
+        // Data: Klíč (slovo) -> Hodnota (americký překlad)
+        const data = {
+            "Čísla": {
+                "1": "One",
+                "2": "Two",
+                "3": "Three",
+                "4": "Four",
+                "5": "Five",
+                "6": "Six",
+                "7": "Seven",
+                "8": "Eight",
+                "9": "Nine",
+                "10": "Ten",
+                "11": "Eleven",
+                "12": "Twelve",
+                "13": "Thirteen",
+                "14": "Fourteen",
+                "15": "Fifteen",
+                "16": "Sixteen",
+                "17": "Seventeen",
+                "18": "Eighteen",
+                "19": "Nineteen",
+                "20": "Twenty"
+            },
+              " tělo": {
+        "Hlava": "Head",
+        "Ruka": "Hand",
+        "Noha": "Leg",
+        "Oči": "Eyes",
+        "Uši": "Ears",
+        "Nos": "Nose",
+        "Ústa": "Mouth",
+        "Vlasy": "Hair",
+        "Rameno": "Shoulder",
+        "Koleno": "Knee",
+        "Prsty": "Fingers",
+        "Záda": "Back",
+        "Břicho": "Stomach",
+        "Loket": "Elbow",
+        "Krk": "Neck",
+        "Zuby": "Teeth",
+        "Jazyk": "Tongue",
+        "Chodidlo": "Foot",
+        "Srdce": "Heart",
+        "Kůže": "Skin"
+    },
+            "Letiště": {
+        "Terminál": "Terminal",
+        "Brána": "Gate",
+        "Zavazadla": "Baggage",
+        "Letenka": "Ticket",
+        "Pas": "Passport",
+        "Odlety": "Departures",
+        "Přílety": "Arrivals",
+        "Odbavení": "Check-in",
+        "Bezpečnostní kontrola": "Security check",
+        "Letadlo": "Airplane",
+        "Pilot": "Pilot",
+        "Letuška": "Flight attendant",
+        "Sedadlo": "Seat",
+        "Dráha": "Runway",
+        "Cestovní pas": "Travel passport",
+        "Celní kontrola": "Customs",
+        "Zpoždění": "Delay",
+        "Informace": "Information desk",
+        "Odletová hala": "Departure lounge",
+        "Palubní vstupenka": "Boarding pass"
+    },
+            "Jídlo": {
+                "Chléb": "Bread",
+                "Voda": "Water",
+                "Maso": "Meat"
+            },
+            "Zvířata": {
+                "Pes": "Dog",
+                "Kočka": "Cat",
+                "Pták": "Bird"
+            },
+            "Příroda": {
+                "Strom": "Tree",
+                "Květina": "Flower",
+                "Řeka": "River"
+            }
+        };
+
+        function showMain() {
+            nav.innerHTML = '';
+            wrapper.innerHTML = '';
+            Object.keys(data).forEach(topic => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.textContent = topic;
+                card.onclick = () => showSub(topic);
+                wrapper.appendChild(card);
+            });
+        }
+
+        function showSub(topic) {
+            nav.innerHTML = '<button class="back-btn" onclick="showMain()">Zpět na témata</button>';
+            wrapper.innerHTML = '';
+            Object.keys(data[topic]).forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.textContent = item;
+                card.onclick = () => showTranslation(topic, item);
+                wrapper.appendChild(card);
+            });
+        }
+
+        function showTranslation(topic, item) {
+            nav.innerHTML = '<button class="back-btn" onclick="showSub(\'' + topic + '\')">Zpět na výběr</button>';
+            wrapper.innerHTML = `
+                <div class="card">
+                    <p>Česky: ${item}</p>
+                    <div class="translation-box">${data[topic][item]}</div>
+                </div>
+            `;
+        }
+
+        showMain();
+    </script>
+</body>
+</html>
