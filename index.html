@@ -8,8 +8,27 @@
         #card-wrapper { display: flex; flex-direction: column; align-items: center; gap: 10px; }
         .card { width: 80%; max-width: 500px; padding: 50px; background: #fff; border: 1px solid gold; border-radius: 50px; cursor: pointer; margin: 50px;font-size: 30px; }
         .card:hover { background: #e9e9e9; }
-        .back-btn { margin-bottom: 20px; padding: 10px 20px; cursor: pointer; background: #333; color: #fff; border: none; border-radius: 5px; }
+        .back-btn { margin-bottom: 20px; padding: 10px 20px; cursor: pointer; background: white; border: none; border-radius: 5px; }
         .translation-box { font-size: 1.5em; font-weight: bold; color: #007bff; }h1 { color: black;background-color: gold;height: 70px;display: flex;justify-content: center;align-items: center;margin: 0; }
+       footer { background-color: #333;color: white;padding: 5px;text-align: center; }
+       footer p {
+       margin: 2px 0; /* Zmenšuje mezeru mezi řádky textu */
+       font-size: 0.7em; /* Zmenšuje velikost písma */
+}
+/* Toto pravidlo se aktivuje, pokud je šířka obrazovky menší než 600 pixelů (mobily) */
+@media (max-width: 600px) {
+    .card {
+        padding: 20px; /* Původních 50px se zmenší na 20px */
+        font-size: 20px; /* Zmenší se i písmo, aby se text lépe vešel */
+        margin: 10px;    /* Zmenší vnější okraje karet */
+    }
+}
+
+   
+    
+    
+    
+
     </style>
 </head>
 <body>
@@ -18,6 +37,8 @@
         <h1>"QuickSpeak ABC"</h1>
     </header>
 
+
+    <main>
     <div id="navigation"></div>
     <div id="card-wrapper"></div>
 
@@ -605,5 +626,12 @@
 
         showMain();
     </script>
+    </main>
+
+    <footer>
+          <p>© 2026 QuickSpeak ABC. Všechna práva vyhrazená.</p>
+        <p>Vytvořeno pro rychlé a jednoduché učení angličtiny.</p>
+        <a href="https://martinpiloprace-glitch.github.io/">Můj GitHub profil</a>
+    </footer>
 </body>
 </html>
