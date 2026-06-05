@@ -6,7 +6,7 @@
     <style>
         body { font-family: sans-serif; background-color: black; padding: 20px; text-align: center; }
         #card-wrapper { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-        .card { width: 80%; max-width: 500px; padding: 50px; background: #fff; border: 1px solid gold; border-radius: 8px; cursor: pointer; margin: 50px;font-size: 30px; }
+        .card { width: 80%; max-width: 500px; padding: 50px; background: #fff; border: 1px solid gold; border-radius: 50px; cursor: pointer; margin: 50px;font-size: 30px; }
         .card:hover { background: #e9e9e9; }
         .back-btn { margin-bottom: 20px; padding: 10px 20px; cursor: pointer; background: #333; color: #fff; border: none; border-radius: 5px; }
         .translation-box { font-size: 1.5em; font-weight: bold; color: #007bff; }h1 { color: black;background-color: gold;height: 70px;display: flex;justify-content: center;align-items: center;margin: 0; }
@@ -27,7 +27,7 @@
 
         // Data: Klíč (slovo) -> Hodnota (americký překlad)
         const data = {
-            "Čísla": {
+            "Čísla - number": {
                 "1": "One",
                 "2": "Two",
                 "3": "Three",
@@ -49,7 +49,7 @@
                 "19": "Nineteen",
                 "20": "Twenty"
             },
-              " tělo": {
+              "tělo - body": {
         "Hlava": "Head",
         "Ruka": "Hand",
         "Noha": "Leg",
@@ -71,7 +71,7 @@
         "Srdce": "Heart",
         "Kůže": "Skin"
     },
-            "Letiště": {
+            "Letiště - airport": {
         "Terminál": "Terminal",
         "Brána": "Gate",
         "Zavazadla": "Baggage",
@@ -93,7 +93,7 @@
         "Odletová hala": "Departure lounge",
         "Palubní vstupenka": "Boarding pass"
     },
-    "Orgány": {
+    "Orgány -  organs": {
         "Moze": "Brain",
         "Srdce": "Heart",
         "Plíce": "Lungs",
@@ -115,7 +115,7 @@
         "Vaječníky": "Ovaries",
         "Štítná žláza": "Thyroid"
     },
-    "Dopravní prostředky": {
+    "Dopravní prostředky -  vehicles": {
         "Auto": "Car",
         "Kolo": "Bicycle",
         "Motorka": "Motorcycle",
@@ -137,7 +137,7 @@
         "Skateboard": "Skateboard",
         "Koloběžka": "Scooter"
     },
-    "Nádobí": {
+    "Kuchyňské nádobí - Kitchenware": {
         "Talíř": "Plate",
         "Miska": "Bowl",
         "Hrnek": "Mug",
@@ -159,7 +159,7 @@
         "Cedník": "Colander",
         "Špachtle": "Spatula"
     },
-    "Zelenina": {
+    "Zelenina - vegetables": {
         "Mrkev": "Carrot",
         "Brambora": "Potato",
         "Rajče": "Tomato",
@@ -181,7 +181,7 @@
         "Červená řepa": "Beetroot",
         "Špenát": "Spinach"
     },
-    "Ovoce": {
+    "Ovoce - fruit ": {
         "Jablko": "Apple",
         "Hruška": "Pear",
         "Banán": "Banana",
@@ -203,7 +203,7 @@
         "Grapefruit": "Grapefruit",
         "Třešeň": "Cherry"
     },
-    "Rodina": {
+    "Rodina -  family": {
         "Matka": "Mother",
         "Otec": "Father",
         "Syn": "Son",
@@ -225,7 +225,7 @@
         "Tchyně": "Mother-in-law",
         "Pravnuk": "Great-grandson"
     },
-    "Oblečení": {
+    "Oblečení -  clothing": {
         "Tričko": "T-shirt",
         "Košile": "Shirt",
         "Kalhoty": "Trousers",
@@ -247,7 +247,7 @@
         "Spodní prádlo": "Underwear",
         "Pyžamo": "Pyjamas"
     },
-    "Zvířata": {
+    "Zvířata - animals": {
         "Pes": "Dog",
         "Kočka": "Cat",
         "Pták": "Bird",
@@ -269,7 +269,7 @@
         "Had": "Snake",
         "Rybka": "Fish"
     },
-    "Počasí": {
+    "Počasí - weather": {
         "Slunečno": "Sunny",
         "Oblačno": "Cloudy",
         "Zataženo": "Overcast",
@@ -291,29 +291,7 @@
         "Sníh": "Snow",
         "Déšť": "Rain"
     },
-    "Počasí": {
-        "Slunečno": "Sunny",
-        "Oblačno": "Cloudy",
-        "Zataženo": "Overcast",
-        "Prší": "Raining",
-        "Sněží": "Snowing",
-        "Vítr": "Windy",
-        "Bouřka": "Thunderstorm",
-        "Mlha": "Foggy",
-        "Teplo": "Warm",
-        "Zima": "Cold",
-        "Horko": "Hot",
-        "Mráz": "Frost",
-        "Blesk": "Lightning",
-        "Duha": "Rainbow",
-        "Kroupy": "Hail",
-        "Vlhkost": "Humidity",
-        "Předpověď": "Forecast",
-        "Teplota": "Temperature",
-        "Sníh": "Snow",
-        "Déšť": "Rain"
-    },
-    "Měsíce": {
+    "Měsíce - months": {
         "Leden": "January",
         "Únor": "February",
         "Březen": "March",
@@ -327,7 +305,7 @@
         "Listopad": "November",
         "Prosinec": "December"
     },
-    "Jídlo": {
+    "Jídlo -  food": {
         "Snídaně": "Breakfast",
         "Oběd": "Lunch",
         "Večeře": "Dinner",
@@ -349,7 +327,7 @@
         "Ovoce": "Fruit",
         "Zelenina": "Vegetables"
     },
-    "Čas": {
+    "Čas - time": {
         "Sekunda": "Second",
         "Minuta": "Minute",
         "Hodina": "Hour",
@@ -371,7 +349,7 @@
         "Nyní": "Now",
         "Vždy": "Always"
     },
-    "Barvy": {
+    "Barvy - colours": {
         "Červená": "Red",
         "Modrá": "Blue",
         "Zelená": "Green",
@@ -393,27 +371,202 @@
         "Krémová": "Cream",
         "Bronzová": "Bronze"
     },
+    "Letiště - věty": {
+        "Kde je odbavení pro můj let?": "Where is the check-in for my flight?",
+        "Mám jedno zavazadlo k odbavení.": "I have one bag to check.",
+        "Můžete mi vytisknout palubní vstupenku?": "Can you print my boarding pass?",
+        "Musím vyndat notebook z tašky?": "Do I need to take the laptop out?",
+        "Kde je bezpečnostní kontrola?": "Where is the security check?",
+        "Zapomněl jsem si sundat pásek.": "I forgot to take off my belt.",
+        "Kde je brána číslo 10?": "Where is gate number 10?",
+        "V kolik hodin začíná nástup do letadla?": "What time does boarding start?",
+        "Je můj let zpožděný?": "Is my flight delayed?",
+        "Kde najdu odletovou halu?": "Where can I find the departure lounge?",
+        "Ztratil jsem svůj pas.": "I lost my passport.",
+        "Kde je informační přepážka?": "Where is the information desk?",
+        "Hledám nejbližší toaletu.": "I am looking for the nearest restroom.",
+        "Mám přestup na jiný let.": "I have a connecting flight.",
+        "Kde si mohu vyzvednout zavazadla?": "Where can I pick up my baggage?",
+        "Můžete mi pomoci, nerozumím hlášení.": "Can you help me, I don't understand the announcement.",
+        "Kde je stanoviště taxi?": "Where is the taxi stand?",
+        "Jak se dostanu do centra města?": "How do I get to the city center?",
+        "Máte tady volnou Wi-Fi?": "Do you have free Wi-Fi here?",
+        "Omlouvám se, neumím moc anglicky.": "I'm sorry, I don't speak much English."
+    },
+    "V restauraci - věty": {
+        "Můžeme dostat stůl pro dva?": "Can we have a table for two?",
+        "Mohl bych vidět jídelní lístek?": "Could I see the menu?",
+        "Co byste mi doporučili?": "What would you recommend?",
+        "Jsem připraven si objednat.": "I am ready to order.",
+        "Máte nějaká vegetariánská jídla?": "Do you have any vegetarian dishes?",
+        "Co je dnešní denní menu?": "What is the daily special?",
+        "Jedno pivo, prosím.": "One beer, please.",
+        "Další vodu, prosím.": "Another water, please.",
+        "Bylo to výborné, děkuji.": "It was delicious, thank you.",
+        "Mohu dostat účet?": "Could I have the bill?",
+        "Berete platební karty?": "Do you accept credit cards?",
+        "Chtěl bych si objednat pití.": "I would like to order a drink.",
+        "Přejete si ještě něco?": "Would you like anything else?",
+        "Není to to, co jsem si objednal.": "This is not what I ordered.",
+        "Prosím, bez ledu.": "No ice, please.",
+        "Můžu dostat sůl a pepř?": "Can I have salt and pepper?",
+        "Je v tom jídle maso?": "Is there meat in this dish?",
+        "Máme rezervaci na sedmou hodinu.": "We have a reservation for seven o'clock.",
+        "Zabalíte mi to s sebou?": "Could you pack this to go?",
+        "Nechci žádný dezert.": "I don't want any dessert."
+    },
+    "Zdravotní pomoc v zahraničí - věty": {
+        "Mám cestovní pojištění, zde je dokument.": "I have travel insurance, here is the document.",
+        "Potřebuji vidět lékaře, mám akutní problém.": "I need to see a doctor, I have an acute problem.",
+        "Mohli byste mi zajistit tlumočníka?": "Could you provide an interpreter?",
+        "Tato bolest začala před dvěma hodinami.": "This pain started two hours ago.",
+        "Užívám tyto léky pravidelně.": "I take these medications regularly.",
+        "Jsem na tyto léky alergický.": "I am allergic to these medications.",
+        "Mám chronické onemocnění srdce/cukrovku.": "I have a chronic heart condition/diabetes.",
+        "Potřebuji lékařskou zprávu pro pojišťovnu.": "I need a medical report for the insurance company.",
+        "Kolik bude stát toto ošetření?": "How much will this treatment cost?",
+        "Mohu platit kartou nebo hotově?": "Can I pay by card or in cash?",
+        "Můžete mi vysvětlit, co to je za vyšetření?": "Can you explain what this examination is?",
+        "Je nutná hospitalizace?": "Is hospitalization necessary?",
+        "Kde si mohu vyzvednout předepsané léky?": "Where can I pick up the prescribed medication?",
+        "Jaké jsou vedlejší účinky těchto léků?": "What are the side effects of these medications?",
+        "Potřebuji potvrzení pro leteckou společnost.": "I need a certificate for the airline.",
+        "Můžete kontaktovat moji asistenční službu?": "Can you contact my assistance service?",
+        "Můj zdravotní stav se zhoršuje.": "My medical condition is getting worse.",
+        "Prosím, mluvte pomalu, nerozumím lékařské terminologii.": "Please speak slowly, I do not understand medical terminology.",
+        "Potřebuji se vrátit domů, je to možné?": "I need to return home, is it possible?",
+        "Kde je nejbližší lékárna s pohotovostí?": "Where is the nearest pharmacy with an emergency service?"
+    },
+    "Na dovolené - věty": {
+        "Kde je nejbližší bankomat?": "Where is the nearest ATM?",
+        "Jak se dostanu k pláži?": "How do I get to the beach?",
+        "Kolik stojí vstupenka?": "How much is the ticket?",
+        "Máte volný pokoj na dvě noci?": "Do you have a room available for two nights?",
+        "Je snídaně v ceně?": "Is breakfast included?",
+        "Můžete mi zavolat taxi?": "Can you call a taxi for me?",
+        "Kde si mohu půjčit auto?": "Where can I rent a car?",
+        "Můžete mi doporučit nějaké zajímavé místo?": "Can you recommend an interesting place?",
+        "Jaká je otevírací doba?": "What are the opening hours?",
+        "Mluvte prosím pomaleji.": "Please speak more slowly.",
+        "Mohl byste to zopakovat?": "Could you repeat that?",
+        "Hledám hotel [Název].": "I am looking for [Name] hotel.",
+        "Kde mohu koupit jízdenku na autobus?": "Where can I buy a bus ticket?",
+        "Je v blízkosti nějaký supermarket?": "Is there a supermarket nearby?",
+        "Mám problém s klimatizací na pokoji.": "I have a problem with the air conditioning in my room.",
+        "Můžete mi pomoci s kufry?": "Can you help me with my luggage?",
+        "Kolik je to odtud pěšky?": "How far is it on foot?",
+        "Mohu si zde koupit SIM kartu?": "Can I buy a SIM card here?",
+        "Potřebuji se dostat na letiště.": "I need to get to the airport.",
+        "Děkuji za pomoc.": "Thank you for your help."
+    },
+    "Ubytování - věty": {
+        "Mám rezervaci na jméno Novák.": "I have a reservation under the name Novak.",
+        "V kolik hodin je check-in?": "What time is check-in?",
+        "Mohl byste mi dát pokoj s výhledem na moře?": "Could you give me a room with a sea view?",
+        "Jaké je heslo k Wi-Fi?": "What is the Wi-Fi password?",
+        "Na pokoji nefunguje klimatizace.": "The air conditioning in the room is not working.",
+        "Potřebuji další čisté ručníky, prosím.": "I need more clean towels, please.",
+        "V mém pokoji je příliš velký hluk.": "There is too much noise in my room.",
+        "Mohu dostat klíč od pokoje navíc?": "Can I get an extra room key?",
+        "V kolik hodin musím pokoj vyklidit?": "What time is the check-out?",
+        "Mohu si u vás nechat zavazadla?": "Can I leave my luggage with you?",
+        "Je v ceně snídaně?": "Is breakfast included?",
+        "V koupelně neteče teplá voda.": "There is no hot water in the bathroom.",
+        "Mohu zaplatit kartou?": "Can I pay by card?",
+        "Je v hotelu výtah?": "Is there an elevator in the hotel?",
+        "Pokoj nebyl dobře uklizený.": "The room was not cleaned properly.",
+        "Kde je nejbližší parkoviště?": "Where is the nearest parking?",
+        "Můžete mi objednat taxi na zítřek?": "Can you book a taxi for me for tomorrow?",
+        "Kolik stojí přistýlka?": "How much is an extra bed?",
+        "Dostali jsme špatný pokoj.": "We have been given the wrong room.",
+        "Děkuji, vše je v pořádku.": "Thank you, everything is fine."
+    },
+    "Volný čas a památky - věty": {
+        "Kde si mohu koupit vstupenky?": "Where can I buy tickets?",
+        "Kolik stojí vstupné pro dospělého?": "How much is the entrance fee for an adult?",
+        "Je dnes muzeum otevřené?": "Is the museum open today?",
+        "Do kolika hodin máte otevřeno?": "What are your opening hours?",
+        "Nabízíte komentované prohlídky?": "Do you offer guided tours?",
+        "Je prohlídka v češtině?": "Is the tour in Czech?",
+        "Je focení uvnitř dovoleno?": "Is photography allowed inside?",
+        "Jak dlouho prohlídka trvá?": "How long does the tour last?",
+        "Existuje nějaká sleva pro studenty?": "Is there a discount for students?",
+        "Co byste mi doporučili vidět v okolí?": "What would you recommend to see nearby?",
+        "Je toto místo vhodné pro děti?": "Is this place suitable for children?",
+        "Kdy začíná další prohlídka?": "When does the next tour start?",
+        "Musím si vstupenky rezervovat předem?": "Do I need to book the tickets in advance?",
+        "Jsou zde nějaké dlouhé fronty?": "Are there any long queues here?",
+        "Kde najdu mapu města?": "Where can I find a city map?",
+        "Je tato památka bezbariérová?": "Is this monument wheelchair accessible?",
+        "Ztratil jsem se, můžete mi pomoci?": "I am lost, can you help me?",
+        "Je vstup zdarma?": "Is the admission free?",
+        "Kde je nejbližší vyhlídka?": "Where is the nearest viewpoint?",
+        "Můžete mi doporučit nějakou dobrou restauraci v centru?": "Can you recommend a good restaurant in the center?"
+    },
+    "CSS_zaklady": {
+    "Barva textu (color)": "Color",
+    "Barva pozadí (background-color)": "BackgroundColor",
+    "Obrázek pozadí (background-image)": "BackgroundImage",
+    "Velikost pozadí (background-size)": "BackgroundSize",
+    "Opakování pozadí (background-repeat)": "BackgroundRepeat",
+    "Pozice pozadí (background-position)": "BackgroundPosition",
 
+    "Šířka (width)": "Width",
+    "Výška (height)": "Height",
+    "Minimální šířka (min-width)": "MinWidth",
+    "Maximální šířka (max-width)": "MaxWidth",
+    "Minimální výška (min-height)": "MinHeight",
+    "Maximální výška (max-height)": "MaxHeight",
 
+    "Okraj (margin)": "Margin",
+    "Vnitřní odsazení (padding)": "Padding",
 
+    "Rámeček (border)": "Border",
+    "Styl rámečku (border-style)": "BorderStyle",
+    "Šířka rámečku (border-width)": "BorderWidth",
+    "Barva rámečku (border-color)": "BorderColor",
+    "Zaoblení rohů (border-radius)": "BorderRadius",
 
-            
-                
-                
-                
-            
-            
-                
-                "Město": {
-                    "Dům": "House",
-                    "Ulice": "Street",
-                    "Obchod": "Shop"
-            },
-            "Příroda": {
-                "Strom": "Tree",
-                "Květina": "Flower",
-                "Řeka": "River"
-            }
+    "Zobrazení (display)": "Display",
+    "Pozice (position)": "Position",
+    "Horní pozice (top)": "Top",
+    "Dolní pozice (bottom)": "Bottom",
+    "Levá pozice (left)": "Left",
+    "Pravá pozice (right)": "Right",
+    "Vrstevník (z-index)": "ZIndex",
+
+    "Flexbox (display: flex)": "Flex",
+    "Flex směr (flex-direction)": "FlexDirection",
+    "Flex zarovnání (justify-content)": "JustifyContent",
+    "Flex zarovnání křížové (align-items)": "AlignItems",
+    "Flex zalamování (flex-wrap)": "FlexWrap",
+
+    "Grid (display: grid)": "Grid",
+    "Sloupce mřížky (grid-template-columns)": "GridTemplateColumns",
+    "Řádky mřížky (grid-template-rows)": "GridTemplateRows",
+    "Mezera mřížky (gap)": "Gap",
+
+    "Velikost písma (font-size)": "FontSize",
+    "Tloušťka písma (font-weight)": "FontWeight",
+    "Rodina písma (font-family)": "FontFamily",
+    "Styl písma (font-style)": "FontStyle",
+    "Výška řádku (line-height)": "LineHeight",
+    "Zarovnání textu (text-align)": "TextAlign",
+    "Dekorace textu (text-decoration)": "TextDecoration",
+    "Transformace textu (text-transform)": "TextTransform",
+
+    "Stín prvku (box-shadow)": "BoxShadow",
+    "Stín textu (text-shadow)": "TextShadow",
+
+    "Průhlednost (opacity)": "Opacity",
+    "Přesah obsahu (overflow)": "Overflow",
+
+    "Kurzory (cursor)": "Cursor",
+
+    "Transformace (transform)": "Transform",
+    "Přechody (transition)": "Transition",
+    "Animace (animation)": "Animation"
+},
         };
 
         function showMain() {
